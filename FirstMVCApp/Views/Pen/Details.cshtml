@@ -1,0 +1,36 @@
+﻿@model FirstMVCApp.Models.Pen
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pen</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PenId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PenId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PenName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PenName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PenId}) |
+    <a asp-action="PendetailsList">Back to List</a>
+</div>
